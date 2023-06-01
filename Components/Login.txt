@@ -1,0 +1,330 @@
+/**
+ * <Button
+        style={styles.button}
+        title="Login" 
+        onPress={handlePress}
+
+      />
+      <Button 
+        title="SignUp" 
+        onPress={handleSignUP} 
+      />
+ */
+
+// import React from 'react';
+// import { View, Text, TextInput, Button } from 'react-native';
+// import { createStackNavigator } from '@react-navigation/stack';
+// import { NavigationContainer } from '@react-navigation/native';
+// import TabNavigator from './TabNavigator';
+// import { getAuth } from 'firebase/auth';
+// import { firebase } from '../AppConfiguration/config';
+
+
+// const Stack = createStackNavigator();
+
+// // const auth = getAuth();
+// // const user = auth.currentUser;
+
+// // if (user) {
+// //   // User is signed in, see docs for a list of available properties
+// //   // https://firebase.google.com/docs/reference/js/firebase.User
+// //   // ...
+// //   navigation.navigate('TabNavigator');
+  
+// // } //else {
+// //   // No user is signed in.
+// // //}
+
+
+
+
+// function LoginPage({ navigation }) {
+// //
+
+
+
+
+
+
+
+//  //make functions for signupButton press
+
+
+//   const handlePress = () => {
+//   //sign in function from firebase/auth
+
+
+//   const auth = getAuth();
+//   email = "dooley4ctech@gmail.com";
+//   password = "abcdefg1";
+//   firebase.signInWithEmailAndPassword(auth, email, password)
+//     .then((userCredential) => {
+//       // Signed in 
+//       const user = userCredential.user;
+//       // ...
+//       navigation.navigate('TabNavigator');
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//     });
+
+
+
+  
+  
+//   //on succesful login navigate
+//   //pass uuid and/or token as a prop
+//   navigation.navigate('TabNavigator');
+  
+//     //on unsuccessful login, alert
+
+//   };
+
+
+//     //pass name and pword as parameters to handlepress
+//     //add signup button
+//     return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <Text>Please Login</Text>
+//       <TextInput placeholder="Username" />
+//       <TextInput placeholder="Password" secureTextEntry />
+      
+//       <Button title="Login" onPress={handlePress} />
+//     </View>
+//   );
+// }
+
+// function MainStackNavigator() {
+//   return (
+//     <NavigationContainer independent={true} >
+//       <Stack.Navigator>
+//         <Stack.Screen name="Login" component={LoginPage} options={{headerShown: false}}/>
+//         <Stack.Screen name="TabNavigator" component={TabNavigator} options={{headerShown: false}}/>
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }
+
+// export default MainStackNavigator;
+
+
+
+// // // import React, { Component } from 'react';
+// // // import { View, TextInput, Text, Button } from 'react-native';
+// // // import { createStackNavigator } from '@react-navigation/stack';
+// // // import { NavigationContainer } from '@react-navigation/native';
+// // // import TabNavigator from './TabNavigator';
+
+// // // class LoginPage extends Component {
+
+
+
+// // //     render(){
+// // //   return (
+// // //     <NavigationContainer>
+// // //       <Stack.Navigator>
+// // //         <Stack.Screen name="TheScreen" component={TheScreen} />
+// // //         <Stack.Screen name="TabNavigator" component={TabNavigator} />
+// // //       </Stack.Navigator>
+// // //     </NavigationContainer>
+// // //   );
+// // // }
+
+// // // function TheScreen({ navigation }) {
+// // //     const handlePress = () =>{
+// // //         navigation.navigate('TabNavigator');
+// // //     };
+// // //     return (
+// // //     <View style={{ marginLeft: 40 }}>
+// // //       <Text>UserName: </Text>
+// // //       <TextInput />
+// // //       <Text>Password: </Text>
+// // //       <TextInput />
+// // //       <Button
+// // //         title={'Login'}
+// // //         onPress={() => navigation.navigate('ScreenTwo')}
+// // //       />
+// // //     </View>
+// // //   );
+// // // }
+
+// // // const Stack = createStackNavigator();
+
+// // // export default LoginPage;
+
+
+
+// // import React, { Component, useState, useEffect } from 'react';
+// // import {View, TextInput, Text} from 'react-native';
+// // import { Button } from 'react-native-web';
+// // import { createStackNavigator } from '@react-navigation/stack';
+// // import { NavigationContainer } from '@react-navigation/native';
+// // import TabNavigator from './TabNagivator';
+
+// // class LoginPage extends Component {
+// //     render(){
+// //         return(
+// //             <NavigationContainer>
+// //             <Stack.Navigator>
+// //               <Stack.Screen name="ScreenOne" component={Thescreen} />
+// //               <Stack.Screen name="ScreenTwo" component={TabNavigator} />
+// //             </Stack.Navigator>
+// //           </NavigationContainer>
+
+// //         );
+// //     }
+// // }
+
+// // function Thescreen({ navigation }) {
+// //     return (
+// //         <View style={{marginLeft: 40}}>
+// //         <Text>UserName: </Text>
+// //         <TextInput />
+// //         <Text>Password: </Text>
+// //         <TextInput />
+// //         <Button title={'Login'}
+// //       titleStyle={{ fontSize: 50 }}
+// //       onPress={() => navigation.navigate('TabNavigator')} />
+// //     </View>
+
+// //         );
+// //   }
+
+
+// // const Stack = createStackNavigator();
+
+
+// // export default LoginPage
+
+
+
+
+
+
+/*
+import React from 'react';
+import { View, Text, TextInput, Button } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import TabNavigator from './TabNavigator';
+
+const Stack = createStackNavigator();
+
+function LoginPage({ navigation }) {
+  const handlePress = () => {
+    navigation.navigate('TabNavigator');
+  };
+
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Please Login</Text>
+      <TextInput placeholder="Username" />
+      <TextInput placeholder="Password" secureTextEntry />
+      <Button title="Login" onPress={handlePress} />
+    </View>
+  );
+}
+
+function MainStackNavigator() {
+  return (
+    <NavigationContainer independent={true} >
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={LoginPage} options={{headerShown: false}}/>
+        <Stack.Screen name="TabNavigator" component={TabNavigator} options={{headerShown: false}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default MainStackNavigator;
+
+
+
+// // import React, { Component } from 'react';
+// // import { View, TextInput, Text, Button } from 'react-native';
+// // import { createStackNavigator } from '@react-navigation/stack';
+// // import { NavigationContainer } from '@react-navigation/native';
+// // import TabNavigator from './TabNavigator';
+
+// // class LoginPage extends Component {
+
+
+
+// //     render(){
+// //   return (
+// //     <NavigationContainer>
+// //       <Stack.Navigator>
+// //         <Stack.Screen name="TheScreen" component={TheScreen} />
+// //         <Stack.Screen name="TabNavigator" component={TabNavigator} />
+// //       </Stack.Navigator>
+// //     </NavigationContainer>
+// //   );
+// // }
+
+// // function TheScreen({ navigation }) {
+// //     const handlePress = () =>{
+// //         navigation.navigate('TabNavigator');
+// //     };
+// //     return (
+// //     <View style={{ marginLeft: 40 }}>
+// //       <Text>UserName: </Text>
+// //       <TextInput />
+// //       <Text>Password: </Text>
+// //       <TextInput />
+// //       <Button
+// //         title={'Login'}
+// //         onPress={() => navigation.navigate('ScreenTwo')}
+// //       />
+// //     </View>
+// //   );
+// // }
+
+// // const Stack = createStackNavigator();
+
+// // export default LoginPage;
+
+
+
+// import React, { Component, useState, useEffect } from 'react';
+// import {View, TextInput, Text} from 'react-native';
+// import { Button } from 'react-native-web';
+// import { createStackNavigator } from '@react-navigation/stack';
+// import { NavigationContainer } from '@react-navigation/native';
+// import TabNavigator from './TabNagivator';
+
+// class LoginPage extends Component {
+//     render(){
+//         return(
+//             <NavigationContainer>
+//             <Stack.Navigator>
+//               <Stack.Screen name="ScreenOne" component={Thescreen} />
+//               <Stack.Screen name="ScreenTwo" component={TabNavigator} />
+//             </Stack.Navigator>
+//           </NavigationContainer>
+
+//         );
+//     }
+// }
+
+// function Thescreen({ navigation }) {
+//     return (
+//         <View style={{marginLeft: 40}}>
+//         <Text>UserName: </Text>
+//         <TextInput />
+//         <Text>Password: </Text>
+//         <TextInput />
+//         <Button title={'Login'}
+//       titleStyle={{ fontSize: 50 }}
+//       onPress={() => navigation.navigate('TabNavigator')} />
+//     </View>
+
+//         );
+//   }
+
+
+// const Stack = createStackNavigator();
+
+
+// export default LoginPage
+*/
